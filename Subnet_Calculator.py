@@ -25,7 +25,7 @@ class IPv4:
 
     def getMask(self):
         mask_as_list = []
-        octet_index, remaining_one_bits = divmod(self.mask, 8) ## ex, 26-> 3,2
+        octet_index, remaining_one_bits = divmod(self.mask, 8)
         octet_mask = self.bits_to_decimal(remaining_one_bits)
         for i in range(4):
             if i < octet_index:
